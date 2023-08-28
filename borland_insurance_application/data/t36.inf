@@ -1,0 +1,11 @@
+[t36]
+FileName1=t36.txt
+URL1=https://incoming.telemetry.mozilla.org/submit/firefox-desktop/events/1/769f0993-6222-486c-ad7f-117a6298b03f
+Total=1
+RequestHeaderFile=t36_RequestHeader.txt
+RequestBodyFile=t36_RequestBody.txt
+ResponseHeaderFile=t36_ResponseHeader.txt
+ContentType=text/plain
+SnapshotXmlFile=snapshot_36.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

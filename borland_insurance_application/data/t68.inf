@@ -1,0 +1,15 @@
+[t68]
+FileName1=t68_carMakeData.json
+URL1=https://demo.borland.com/InsuranceWebExtJS/data/carMakeData.jsf?_dc=1693204973639
+Total=3
+ContentType=application/json
+SnapshotXmlFile=snapshot_68.xml
+RequestHeaderFile=t68_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t68_ResponseHeader.txt
+FileName2=t68_text-bg.gif
+URL2=https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/form/text-bg.gif
+FileName3=t68_trigger.gif
+URL3=https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/form/trigger.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

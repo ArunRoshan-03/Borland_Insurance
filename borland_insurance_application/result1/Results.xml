@@ -1,0 +1,573 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="Vugen" productVer="2023" os="" host="ATMECSINLT-1311"><DocLocation><![CDATA[C:\Users\arunroshan.r\Documents\VuGen\Scripts\borland_insurance\borland_insurance_application]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[borland_insurance_application]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="28-Aug-23 - 20:35:25" eTime="28-Aug-23 - 20:35:25" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[TC_01_lanuch]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Service: Set Sockets Option]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Set socket option <STRONG><FONT COLOR=#00AF00>SSL_VERSION</FONT></STRONG> with value <STRONG><FONT COLOR=#00AF00>AUTO</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:26]]></Time>
+<TimeTick>1693235126</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" >
+<Disp><![CDATA[Service: Set Sockets Option]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>C_jsessionid</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=jsessionid=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=" enctype</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:26]]></Time>
+<TimeTick>1693235126</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="10" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Url: InsuranceWebExtJS]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:28]]></Time>
+<TimeTick>1693235128</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="11" status="Passed" >
+<Disp><![CDATA[Url: InsuranceWebExtJS]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:25" eTime="28-Aug-23 - 20:35:28" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[TC_01_lanuch Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T8">
+<AName><![CDATA[TC_02_login]]></AName>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Submit Data: index.jsf;jsessionid={C_jsessionid}]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:33]]></Time>
+<TimeTick>1693235133</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="14" status="Passed" >
+<Disp><![CDATA[Submit Data: index.jsf;jsessionid={C_jsessionid}]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:28" eTime="28-Aug-23 - 20:35:33" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="13" status="Passed" >
+<Disp><![CDATA[TC_02_login Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T10">
+<AName><![CDATA[TC_03_select_automobile_type]]></AName>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_vehicle_type</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>value="(.*?)" /><label for="autoquote:vehicle:</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:33]]></Time>
+<TimeTick>1693235133</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="17" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_viewstate</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>id="javax.faces.ViewState" value="(.*?)" /></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:33]]></Time>
+<TimeTick>1693235133</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="18" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Url: quote_auto.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:34]]></Time>
+<TimeTick>1693235134</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="19" status="Passed" >
+<Disp><![CDATA[Url: quote_auto.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_gender</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>value="(.*?)" /><label for="autoquote:gender</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:34]]></Time>
+<TimeTick>1693235134</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="20" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_driving_record</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>value="(.*?)" /><label for="autoquote:type</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:34]]></Time>
+<TimeTick>1693235134</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="21" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Automobile Instant Quote</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:34]]></Time>
+<TimeTick>1693235134</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="22" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Instant Auto Quote - Continued</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:35]]></Time>
+<TimeTick>1693235135</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="23" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Submit Data: quote_auto.jsf_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:35]]></Time>
+<TimeTick>1693235135</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="24" status="Passed" >
+<Disp><![CDATA[Submit Data: quote_auto.jsf_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:33" eTime="28-Aug-23 - 20:35:35" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="16" status="Passed" >
+<Disp><![CDATA[TC_03_select_automobile_type Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T19">
+<AName><![CDATA[TC_04_select_the_option]]></AName>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_financial_info</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>value="(.*?)" /><label for="autoquote:finInfo</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:36]]></Time>
+<TimeTick>1693235136</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="27" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=  Last Screen! Give us some information about your automobile.</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:36]]></Time>
+<TimeTick>1693235136</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="28" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Instant Auto Quote - Continued</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:36]]></Time>
+<TimeTick>1693235136</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="29" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Submit Data: quote_auto2.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:46]]></Time>
+<TimeTick>1693235146</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="30" status="Passed" >
+<Disp><![CDATA[Submit Data: quote_auto2.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Url: carMakeData.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:46]]></Time>
+<TimeTick>1693235146</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="31" status="Passed" >
+<Disp><![CDATA[Url: carMakeData.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:35" eTime="28-Aug-23 - 20:35:46" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="26" status="Passed" >
+<Disp><![CDATA[TC_04_select_the_option Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T25">
+<AName><![CDATA[TC_05_select_car_type]]></AName>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_car_name</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>"Make":"(.*?)"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:46]]></Time>
+<TimeTick>1693235146</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="34" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Submit Data: carMakeData.jsf_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:48]]></Time>
+<TimeTick>1693235148</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="35" status="Passed" >
+<Disp><![CDATA[Submit Data: carMakeData.jsf_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>C_car_model</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>"Make":"(.*?)"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:48]]></Time>
+<TimeTick>1693235148</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="36" >
+<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Url: carModelData.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:48]]></Time>
+<TimeTick>1693235148</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="37" status="Passed" >
+<Disp><![CDATA[Url: carModelData.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Submit Data: carModelData.jsf_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:49]]></Time>
+<TimeTick>1693235149</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="38" status="Passed" >
+<Disp><![CDATA[Submit Data: carModelData.jsf_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Based on the following information that you provided</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:49]]></Time>
+<TimeTick>1693235149</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="39" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Personal Information</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:49]]></Time>
+<TimeTick>1693235149</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="40" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Submit Data: quote_auto3.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:50]]></Time>
+<TimeTick>1693235150</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="41" status="Passed" >
+<Disp><![CDATA[Submit Data: quote_auto3.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:46" eTime="28-Aug-23 - 20:35:50" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="33" status="Passed" >
+<Disp><![CDATA[TC_05_select_car_type Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T34">
+<AName><![CDATA[TC_06_click_the_purchase_button]]></AName>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param Ex]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>TargetParam = <STRONG><FONT COLOR=#00AF00>C_user_name</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=label></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=                   </FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ordinal=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:51]]></Time>
+<TimeTick>1693235151</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="44" >
+<Disp><![CDATA[Service: Reg Save Param Ex]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Credit Card Information </FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:51]]></Time>
+<TimeTick>1693235151</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="45" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Submit Data: quote_result.jsf]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:52]]></Time>
+<TimeTick>1693235152</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="46" status="Passed" >
+<Disp><![CDATA[Submit Data: quote_result.jsf]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t19.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:50" eTime="28-Aug-23 - 20:35:52" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="43" status="Passed" >
+<Disp><![CDATA[TC_06_click_the_purchase_button Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T38">
+<AName><![CDATA[TC_07_enter_credit_card_information]]></AName>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=Congratulations</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:52]]></Time>
+<TimeTick>1693235152</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="49" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=You have purchased a new auto policy.  Welcome to the InsuranceCo family</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:52]]></Time>
+<TimeTick>1693235152</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="50" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Submit Data: purchase_quote.jsf_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:53]]></Time>
+<TimeTick>1693235153</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="51" status="Passed" >
+<Disp><![CDATA[Submit Data: purchase_quote.jsf_3]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t20.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:52" eTime="28-Aug-23 - 20:35:53" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="48" status="Passed" >
+<Disp><![CDATA[TC_07_enter_credit_card_information Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T42">
+<AName><![CDATA[TC_08_logout]]></AName>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Url: index.jsf_4]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:54]]></Time>
+<TimeTick>1693235154</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="54" status="Passed" >
+<Disp><![CDATA[Url: index.jsf_4]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t21.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=login-messages</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:54]]></Time>
+<TimeTick>1693235154</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="55" >
+<Disp><![CDATA[Service: Reg Find]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Submit Form: index.jsf_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Step failed</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:55]]></Time>
+<TimeTick>1693235155</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="56" status="Failed" >
+<Disp><![CDATA[Submit Form: index.jsf_5]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t22.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Script Aborted!]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Failed</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[28-Aug-23 - 20:35:55]]></Time>
+<TimeTick>1693235155</TimeTick>
+<NodeArgs eType="General" icon="1" nRep="57" status="Failed" >
+<Disp><![CDATA[Script Aborted!]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="28-Aug-23 - 20:35:53" eTime="28-Aug-23 - 20:35:56" passed="1" failed="2" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="53" status="Failed" >
+<Disp><![CDATA[TC_08_logout Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Failed" >
+<Disp><![CDATA[borland_insurance_application Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T47">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="28-Aug-23 - 20:35:56" eTime="28-Aug-23 - 20:35:56" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="60" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="28-Aug-23 - 20:35:13" eTime="28-Aug-23 - 20:35:57" passed="13" failed="2" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Failed" >
+<Disp><![CDATA[Test borland_insurance_application Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

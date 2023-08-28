@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: image/gif
+Last-Modified: Thu, 17 Jan 2013 16:24:36 GMT
+Accept-Ranges: bytes
+ETag: W/"771-1358439876000"
+X-FRAME-OPTIONS: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000
+Date: Mon, 28 Aug 2023 06:42:53 GMT
+Content-Length: 771
+

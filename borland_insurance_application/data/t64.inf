@@ -1,0 +1,17 @@
+[t64]
+FileName1=t64.htm
+URL1=https://demo.borland.com/InsuranceWebExtJS/quote_auto.jsf
+Total=4
+RequestHeaderFile=t64_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t64_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_64.xml
+FileName2=t64_tilesV.png
+URL2=https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png
+FileName3=t64_css-nav.gif
+URL3=https://demo.borland.com/InsuranceWebExtJS/images/css-nav.gif
+FileName4=t64_next.gif
+URL4=https://demo.borland.com/InsuranceWebExtJS/images/next.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

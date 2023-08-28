@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">   
+    <head>
+        <title>InsuranceWeb: Automobile Instant Quote</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="en" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />  
+        <meta http-equiv="expires" content="-1" />
+        <meta name="keywords" />
+        <meta name="description" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="javascript/menu.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"><div xmlns="http://www.w3.org/1999/xhtml">
+    
+    <div id="header">
+      &nbsp; 
+    </div>
+    
+</div>
+            </div>
+            <div class="clear"></div>
+            <div id="navigation"><div xmlns="http://www.w3.org/1999/xhtml">
+    
+    <div id="nav">
+      <ul>
+        <li id="home"><a href="index.jsf">Home</a></li>        
+        <li>
+<form id="Linkform" name="Linkform" method="post" action="/InsuranceWebExtJS/quote_auto2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="Linkform" value="Linkform" />
+
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {f.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var ps = pvp.split(',');for (var i = 0,ii = 0;i < ps.length;i++,ii++) {var p = document.createElement("input");p.type = "hidden";p.name = ps[i];p.value = ps[i + 1];f.appendChild(p);adp[ii] = p;i += 1;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('Linkform'),'Linkform:j_id6,Linkform:j_id6','');}return false">Account</a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id4:j_id6" />
+</form></li>                
+        <li id="contact"><a href="contact.jsf">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <div id="quicklink"><div xmlns="http://www.w3.org/1999/xhtml">
+<form id="quick-link" name="quick-link" method="post" action="/InsuranceWebExtJS/quote_auto2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="quick-link" value="quick-link" />
+<select id="quick-link:jump-menu" name="quick-link:jump-menu" size="1" onchange="MM_jumpMenu('parent',this,0)">	<option value="#">Choose One</option>
+	<option value="quote_auto.jsf">Auto Quote</option>
+	<option value="agent_lookup.jsf">Agent Lookup</option>
+	<option value="agent_lookup_xml.jsf">Agent Lookup (XML)</option>
+	<option value="notImplYet.jsf">Term Life Quote</option>
+	<option value="notImplYet.jsf">Quote Homeowners</option>
+	<option value="notImplYet.jsf">Retrieve Saved Quote</option>
+	<option value="notImplYet.jsf">Report Claim</option>
+	<option value="notImplYet.jsf">Track Claim</option>
+</select><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id4:j_id6" />
+</form>    
+</div>            
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div class="line"></div>
+    
+    <div id="left-nav">
+    	<img src="images/tilesV.png" />
+    </div>	
+    
+</div>
+            </div>
+            <div id="content-main">
+
+        <h1>Automobile Instant Quote</h1>
+        <p>
+            You're almost done! Give us some information about you.
+        </p>
+        <br />
+<form id="autoquote" name="autoquote" method="post" action="/InsuranceWebExtJS/quote_auto2.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="autoquote" value="autoquote" />
+
+            <fieldset>
+                <legend> Instant Auto Quote - Continued </legend>
+                <div>
+                    <label for="age">Age</label><input id="autoquote:age" type="text" name="autoquote:age" value="0" />
+                </div>
+                <div>
+                    <div class="nobr">
+                        <label for="gender">Gender</label><table id="autoquote:gender" class="radio">
+	<tr>
+<td>
+<input type="radio" name="autoquote:gender" id="autoquote:gender:0" value="Male" /><label for="autoquote:gender:0"> Male</label></td>
+<td>
+<input type="radio" name="autoquote:gender" id="autoquote:gender:1" value="Female" /><label for="autoquote:gender:1"> Female</label></td>
+	</tr>
+</table>
+                    </div>
+                    <div class="nobr">
+                    </div>
+                </div>
+                <div class="clear">
+                    <div class="nobr">
+                        <label for="type">Driving Record</label><table id="autoquote:type" class="radio">
+	<tr>
+<td>
+<input type="radio" name="autoquote:type" id="autoquote:type:0" value="Excellent" /><label for="autoquote:type:0"> Excellent - I have a clean record</label></td>
+	</tr>
+	<tr>
+<td>
+<input type="radio" name="autoquote:type" id="autoquote:type:1" value="Good" /><label for="autoquote:type:1"> Good - I have one or two minor violations</label></td>
+	</tr>
+	<tr>
+<td>
+<input type="radio" name="autoquote:type" id="autoquote:type:2" value="Fair" /><label for="autoquote:type:2"> Fair - I've caused one or more accidents</label></td>
+	</tr>
+	<tr>
+<td>
+<input type="radio" name="autoquote:type" id="autoquote:type:3" value="Poor" /><label for="autoquote:type:3"> Poor - I don't have a good driving record</label></td>
+	</tr>
+</table>
+                    </div>
+                    <div class="nobr">
+                    </div>
+                </div>
+                <div class="clear">
+                    <label for="next">&nbsp;</label><input id="autoquote:next" type="image" src="images/next.gif" name="autoquote:next" class="cbutton" />
+                </div>
+           </fieldset><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id4:j_id6" />
+</form>
+            </div>
+            <div class="clear"></div>
+            <div id="footer"><div xmlns="http://www.w3.org/1999/xhtml">
+    
+    <div class="column-left">
+        This site is a fictitious representation<br />
+        of an online company for the purpose of demonstrating Borland Solutions
+    </div>
+    <div class="column-right">
+        <a href="index.jsf">Home</a> -        
+        <a href="webservices.jsf">Webservice</a> -
+        <!-- <a href="settings.jsf">Settings</a> - -->
+        <a href="contact.jsf">Contact Us</a>
+    </div>
+    
+</div>
+            </div>
+        </div> 
+    </body>
+</html>

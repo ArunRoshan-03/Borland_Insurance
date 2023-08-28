@@ -1,0 +1,15 @@
+[t38]
+FileName1=t38.html
+URL1=http://ocsp.digicert.com/
+Total=3
+RequestHeaderFile=t38_RequestHeader.txt
+RequestBodyFile=t38_RequestBody.txt
+ResponseHeaderFile=t38_ResponseHeader.txt
+ContentType=application/ocsp-response
+SnapshotXmlFile=snapshot_38.xml
+FileName2=t38_lbc1.gif
+URL2=https://demo.borland.com/InsuranceWebExtJS/images/lbc1.gif
+FileName3=t38_rtc1.gif
+URL3=https://demo.borland.com/InsuranceWebExtJS/images/rtc1.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

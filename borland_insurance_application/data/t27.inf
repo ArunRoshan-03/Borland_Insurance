@@ -1,0 +1,17 @@
+[t27]
+FileName1=t27.txt
+URL1=https://incoming.telemetry.mozilla.org/submit/firefox-desktop/pageload/1/1ed98f20-316c-4755-82d7-9eb88d11e79f
+Total=4
+RequestHeaderFile=t27_RequestHeader.txt
+RequestBodyFile=t27_RequestBody.txt
+ResponseHeaderFile=t27_ResponseHeader.txt
+ContentType=text/plain
+SnapshotXmlFile=snapshot_27.xml
+FileName2=t27_profile.gif
+URL2=https://demo.borland.com/InsuranceWebExtJS/images/profile.gif
+FileName3=t27_tiles.png
+URL3=https://demo.borland.com/InsuranceWebExtJS/images/tiles.png
+FileName4=t27_highlights.gif
+URL4=https://demo.borland.com/InsuranceWebExtJS/images/highlights.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,18 @@
+POST /submit/firefox-desktop/pageload/1/1ed98f20-316c-4755-82d7-9eb88d11e79f HTTP/1.1
+Host: incoming.telemetry.mozilla.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+content-encoding: gzip
+content-type: application/json; charset=utf-8
+x-telemetry-agent: Glean/53.0.0 (Rust on Windows)
+content-length: 696
+date: Mon, 28 Aug 2023 06:40:12 GMT
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: none
+Pragma: no-cache
+Cache-Control: no-cache
+

@@ -1,0 +1,14 @@
+GET /InsuranceWebExtJS/ext/resources/images/default/grid/loading.gif HTTP/1.1
+Host: demo.borland.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: https://demo.borland.com/InsuranceWebExtJS/ext/resources/css/ext-all.css
+Cookie: JSESSIONID=F67AA8FDDE9134ECD958975692045CDE; UserSessionFilter.sessionId=F67AA8FDDE9134ECD958975692045CDE
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+

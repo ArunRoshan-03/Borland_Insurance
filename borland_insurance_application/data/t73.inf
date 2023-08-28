@@ -1,0 +1,15 @@
+[t73]
+FileName1=t73.htm
+URL1=https://demo.borland.com/InsuranceWebExtJS/quote_auto3.jsf
+Total=3
+RequestHeaderFile=t73_RequestHeader.txt
+RequestBodyFile=t73_RequestBody.txt
+ResponseHeaderFile=t73_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_73.xml
+FileName2=t73_new_quote.gif
+URL2=https://demo.borland.com/InsuranceWebExtJS/images/new_quote.gif
+FileName3=t73_purchase_quote.gif
+URL3=https://demo.borland.com/InsuranceWebExtJS/images/purchase_quote.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

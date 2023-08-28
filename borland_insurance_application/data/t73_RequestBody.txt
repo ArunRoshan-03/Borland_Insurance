@@ -1,0 +1,3 @@
+"autoquote=autoquote&autoquote%3Ayear=1999&makeCombo=Cadillac&autoquote%3Amake=Cadillac&modelCo"
+"mbo=Escalade&autoquote%3Amodel=Escalade&autoquote%3AfinInfo=Finance&autoquote%3Anext.x=46&auto"
+"quote%3Anext.y=12&javax.faces.ViewState=j_id4%3Aj_id7"

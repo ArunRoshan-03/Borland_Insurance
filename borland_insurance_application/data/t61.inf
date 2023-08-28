@@ -1,0 +1,15 @@
+[t61]
+FileName1=t61.htm
+URL1=https://demo.borland.com/InsuranceWebExtJS/index.jsf
+Total=3
+RequestHeaderFile=t61_RequestHeader.txt
+RequestBodyFile=t61_RequestBody.txt
+ResponseHeaderFile=t61_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_61.xml
+FileName2=t61_logout.gif
+URL2=https://demo.borland.com/InsuranceWebExtJS/images/logout.gif
+FileName3=t61_details.gif
+URL3=https://demo.borland.com/InsuranceWebExtJS/images/details.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

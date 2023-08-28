@@ -1,0 +1,17 @@
+[t70]
+FileName1=t70.json
+URL1=https://demo.borland.com/InsuranceWebExtJS/data/carMakeData.jsf
+Total=4
+RequestHeaderFile=t70_RequestHeader.txt
+RequestBodyFile=t70_RequestBody.txt
+ResponseHeaderFile=t70_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_70.xml
+FileName2=t70_shadow.png
+URL2=https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow.png
+FileName3=t70_shadow-lr.png
+URL3=https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow-lr.png
+FileName4=t70_shadow-c.png
+URL4=https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow-c.png
+[ProtocolInfo]
+ProtocolId=QTWeb

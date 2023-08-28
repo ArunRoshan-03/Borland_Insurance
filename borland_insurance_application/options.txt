@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\arunroshan.r\Documents\VuGen\Scripts\borland_insurance\borland_insurance_application
+-IC:\Program Files (x86)\Micro Focus\Virtual User Generator\include
+-ec:\users\arunroshan.r\documents\vugen\scripts\borland_insurance\borland_insurance_application\\logfile.log
+c:\users\arunroshan.r\documents\vugen\scripts\borland_insurance\borland_insurance_application\\combined_borland_insurance_application.c
+c:\users\arunroshan.r\documents\vugen\scripts\borland_insurance\borland_insurance_application\\pre_cci.c

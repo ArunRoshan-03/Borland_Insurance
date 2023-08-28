@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 28 Aug 2023 06:40:02 GMT
+Content-Type: application/json
+Vary: Accept-Encoding
+access-control-expose-headers: content-type, cache-control
+access-control-allow-credentials: true
+cache-control: private, max-age=695, stale-if-error=10011
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip
+Via: 1.1 google
+Alt-Svc: clear
+Transfer-Encoding: chunked
+

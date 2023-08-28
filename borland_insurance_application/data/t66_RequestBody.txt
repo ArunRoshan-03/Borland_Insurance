@@ -1,0 +1,2 @@
+"autoquote=autoquote&autoquote%3Azipcode=620001&autoquote%3Ae-mail=udemo%40gmail.com&autoquote%"
+"3Avehicle=car&autoquote%3Anext.x=60&autoquote%3Anext.y=12&javax.faces.ViewState=j_id4%3Aj_id5"

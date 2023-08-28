@@ -1,0 +1,11 @@
+[t49]
+FileName1=t49_changeset.json
+URL1=https://firefox.settings.services.mozilla.com/v1/buckets/security-state/collections/intermediates/changeset?_expected=1693105023362&_since=%221692910623870%22
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_49.xml
+RequestHeaderFile=t49_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t49_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

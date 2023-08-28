@@ -1,0 +1,18 @@
+POST /InsuranceWebExtJS/data/carModelData.jsf?carMake=Cadillac HTTP/1.1
+Host: demo.borland.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+X-Requested-With: XMLHttpRequest
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 6
+Origin: https://demo.borland.com
+DNT: 1
+Connection: keep-alive
+Referer: https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf
+Cookie: JSESSIONID=F67AA8FDDE9134ECD958975692045CDE; UserSessionFilter.sessionId=F67AA8FDDE9134ECD958975692045CDE
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+

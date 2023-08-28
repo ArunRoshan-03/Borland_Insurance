@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+# SharpDevelop 4.1.3.0
+Project("E66B1649-D9AD-44B1-9695-AEF6EB917E48") = "borland_insurance_application", "borland_insurance_application\borland_insurance_application.usr", "E66B1649-D9AD-44B1-9695-AEF6EB917E48"
+	ProjectSection(CustomLoading) = Data
+		Token = PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8UGVyc2lzdGVuY2VUb2tlbj4NCiAgPExvYWREYXRhPkM6XFVzZXJzXGFydW5yb3NoYW4uclxEb2N1bWVudHNcVnVHZW5cU2NyaXB0c1xib3JsYW5kX2luc3VyYW5jZVxib3JsYW5kX2luc3VyYW5jZV9hcHBsaWNhdGlvblxib3JsYW5kX2luc3VyYW5jZV9hcHBsaWNhdGlvbi51c3I8L0xvYWREYXRhPg0KICA8RmlsZXM+DQogICAgPEZpbGU+QzpcVXNlcnNcYXJ1bnJvc2hhbi5yXERvY3VtZW50c1xWdUdlblxTY3JpcHRzXGJvcmxhbmRfaW5zdXJhbmNlXGJvcmxhbmRfaW5zdXJhbmNlX2FwcGxpY2F0aW9uXGJvcmxhbmRfaW5zdXJhbmNlX2FwcGxpY2F0aW9uLnVzcjwvRmlsZT4NCiAgPC9GaWxlcz4NCiAgPE1vZGlmaWVkPjIwMjMtMDgtMjhUMTE6NDk6NTkuMjI2Mjc3NCswNTozMDwvTW9kaWZpZWQ+DQo8L1BlcnNpc3RlbmNlVG9rZW4+
+	EndProjectSection
+	ProjectSection(ExpandInVugen) = Data
+		Value = True
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		E66B1649-D9AD-44B1-9695-AEF6EB917E48.Debug|Any CPU.Build.0 = Debug|Any CPU
+		E66B1649-D9AD-44B1-9695-AEF6EB917E48.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		E66B1649-D9AD-44B1-9695-AEF6EB917E48.Release|Any CPU.Build.0 = Release|Any CPU
+		E66B1649-D9AD-44B1-9695-AEF6EB917E48.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal

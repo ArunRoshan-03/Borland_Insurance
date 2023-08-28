@@ -1,0 +1,155 @@
+Ext.onReady(function(){
+	
+	
+	var makeHid  = Ext.get('autoquote:make').dom.value;
+	var modelHid = Ext.get('autoquote:model').dom.value;
+	
+	resumeFunc({responseText:"application/json"});
+	
+	var serializationType = "json";
+	var modelDataStore;
+	var comboModel;
+	
+	function resumeFunc(msg){
+		serializationType = msg.responseText;
+		
+		var recordDef = Ext.data.Record.create(
+				[{name: 'id', mapping: 'Id'},
+				 {name: 'name', mapping: 'Make'}]
+		);
+		
+		var makeDataReader;
+		if(serializationType == "xml")			
+			makeDataReader = new Ext.data.XmlReader({	record: 'row',id: 'id'},	recordDef);
+		else
+			makeDataReader = new Ext.data.JsonReader({	root: '',id: 'id'},	recordDef);
+		
+		var modelDataReader;
+		if(serializationType == "xml")			
+			modelDataReader = new Ext.data.XmlReader({	record: 'row',id: 'id'},	recordDef);
+		else
+			modelDataReader = new Ext.data.JsonReader({	root: '',id: 'id'},	recordDef);
+				
+		
+		var makeHttpProxy = new Ext.data.HttpProxy({url: 'data/carMakeData.jsf'});
+		makeHttpProxy.getConnection().on('requestexception', requestFailed);
+		var makeDataStore = new Ext.data.Store({
+			proxy: makeHttpProxy,
+			reader: makeDataReader
+		});
+		
+		makeDataStore.on('loadexception', loadFailedModel);
+		makeDataStore.on('load', loadSuccessful);	
+		makeDataStore.load({callback: loadAndShowCombobox});
+		
+		
+		var modelHttpProxy = new Ext.data.HttpProxy({url: 'data/carModelData.jsf'});	
+		modelHttpProxy.getConnection().on('requestexception', requestFailed);
+		modelDataStore = new Ext.data.Store({
+			proxy: modelHttpProxy,
+			reader: modelDataReader
+		});
+		modelDataStore.on('loadexception', loadFailedModel);
+		modelDataStore.on('load', loadSuccessful);
+		
+		
+		
+		
+		function loadAndShowCombobox(recordArray, options, success){	
+		      var comboRemote = new Ext.form.ComboBox({
+		          fieldLabel: 'Select a category',
+		          id: 'makeCombo',
+		          store: makeDataStore,
+		          displayField: 'name',
+		          triggerAction: 'all',
+		          selectOnFocus: true,
+//		          readOnly :true,
+		          emptyText: 'select make...',
+		          renderTo: 'carMakesDIV',
+		          listeners:{select:
+		          				{fn:function(combo, value){
+		    	  						var selMake = Ext.getCmp('makeCombo');
+		    	  						Ext.get('autoquote:make').set({value: selMake.getValue()});
+			    	  					fillModels(selMake.getValue());
+		      					}
+		          			}
+		      	  }
+		        });
+		      
+		      comboModel = new Ext.form.ComboBox({
+		          fieldLabel: 'Select a model',
+		          id: 'modelCombo',
+		          store: modelDataStore,
+		          displayField: 'name',
+		          triggerAction: 'all',
+		          selectOnFocus: true,
+//		          readOnly :true,
+		          emptyText: 'select model...',
+		          renderTo: 'carModelsDIV',
+		          listeners:{select:
+					{fn:function(combo, value){
+							var selMake = Ext.getCmp('modelCombo');	    	  						
+							Ext.get('autoquote:model').set({value: selMake.getValue()});
+					}
+				}
+		      	}
+		        }		      
+		      );
+		      
+		      if(makeHid != ""){
+		    	  comboRemote.setValue(makeHid);
+		    	  fillModels(makeHid);
+		      }		      
+		      if(modelHid != "")
+		    	  comboModel.setValue(modelHid);
+		}
+	}
+	
+	
+	
+	
+	
+	function requestFailed(connection, response, options) {
+		Ext.MessageBox.alert('Error Message', 
+				"Please contact support with the following: " + 
+				"Status: " + response.status + 
+				", Status Text: " + response.statusText);
+	}
+	
+	function loadSuccessful(store, recordArray, options) {
+	}
+	
+	function loadFailed(proxy, options, response, error) {		
+		// Decodes (parses) a JSON string to an object. If the JSON is invalid, 
+		// this function throws a SyntaxError.
+		var object = Ext.util.JSON.decode(response.responseText);
+		var errorMessage = "Error loading data.";						
+		if (object.carMakes.success) {
+			errorMessage = "The data returned from the server is in the wrong format. ";  		
+		} else {	
+			errorMessage = object.carMakes.message;
+		}		
+		Ext.MessageBox.alert('Error Message', response.responseText);
+	}
+	
+	function loadFailedModel(proxy, options, response, error) {		
+		var object = Ext.util.JSON.decode(response.responseText);
+		var errorMessage = "Error loading data.";						
+		if (object.carModels.success) {
+			errorMessage = "The data returned from the server is in the wrong format. ";  		
+		} else {	
+			errorMessage = object.carModels.message;
+		}		
+		Ext.MessageBox.alert('Error Message', response.responseText);
+	}		
+	
+	function fillModels(selection){
+		modelDataStore.proxy = new Ext.data.HttpProxy({url: 'data/carModelData.jsf?carMake='+selection});
+		comboModel.clearValue();
+		modelDataStore.load();
+	}
+	
+
+	
+	
+});

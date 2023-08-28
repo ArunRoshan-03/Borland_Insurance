@@ -1,0 +1,281 @@
+Virtual User Script started at: 28-Aug-23 8:35:25 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 2023.1.0 for Windows 10; build 406 (Jul 12 2023 09:14:26)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\arunroshan.r\Documents\VuGen\Scripts\borland_insurance\borland_insurance_application\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action TC_01_lanuch.
+TC_01_lanuch.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+TC_01_lanuch.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+TC_01_lanuch.c(5): Notify: Transaction "TC_01_lanuch" started.
+TC_01_lanuch.c(7): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+TC_01_lanuch.c(7): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+TC_01_lanuch.c(15): web_url("InsuranceWebExtJS") started  	[MsgId: MMSG-26355]
+TC_01_lanuch.c(15): Notify: Saving Parameter "C_jsessionid = C139C7394D9B8E60BDACAB72A149D58D".
+TC_01_lanuch.c(15): Notify: Parameter Substitution: parameter "C_jsessionid" =  "C139C7394D9B8E60BDACAB72A149D58D"
+TC_01_lanuch.c(15): Notify: Parameter Substitution: parameter "C_jsessionid" =  "C139C7394D9B8E60BDACAB72A149D58D"
+TC_01_lanuch.c(15): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/images/signup.gif;jsessionid=C139C7394D9B8E60BDACAB72A149D58D" (specified by argument number 27)  	[MsgId: MMSG-26576]
+TC_01_lanuch.c(15): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/images/login.gif;jsessionid=C139C7394D9B8E60BDACAB72A149D58D" (specified by argument number 21)  	[MsgId: MMSG-26576]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/tiles.png" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/profile.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/main_services.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/highlights.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/spacer.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/submit2.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/"  	[MsgId: MMSG-26659]
+TC_01_lanuch.c(15): web_url("InsuranceWebExtJS") was successful, 108297 body bytes, 3375 header bytes  	[MsgId: MMSG-26386]
+TC_01_lanuch.c(36): Notify: Transaction "TC_01_lanuch" ended with a "Pass" status (Duration: 2.4899 Wasted Time: 0.2650).
+Ending action TC_01_lanuch.
+Starting action TC_02_login.
+TC_02_login.c(3): Notify: Transaction "TC_02_login" started.
+TC_02_login.c(5): web_submit_data("index.jsf;jsessionid={C_jsessionid}") started  	[MsgId: MMSG-26355]
+TC_02_login.c(5): Notify: Parameter Substitution: parameter "C_jsessionid" =  "C139C7394D9B8E60BDACAB72A149D58D"
+TC_02_login.c(5): Notify: Parameter Substitution: parameter "user_email_id" =  "udemo@gmail.com"
+TC_02_login.c(5): Notify: Next row for parameter p_password = 1 [table  = p_password].
+TC_02_login.c(5): Notify: Parameter Substitution: parameter "p_password" =  "Atmecs"
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tiles.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/spacer.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/details.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/index.jsf;jsessionid=C139C7394D9B8E60BDACAB72A149D58D"  	[MsgId: MMSG-26659]
+TC_02_login.c(5): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/logout.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/index.jsf;jsessionid=C139C7394D9B8E60BDACAB72A149D58D"  	[MsgId: MMSG-26659]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/profile.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/main_services.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/highlights.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): Resource "https://demo.borland.com/InsuranceWebExtJS/images/submit2.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_02_login.c(5): web_submit_data("index.jsf;jsessionid={C_jsessionid}") was successful, 5910 body bytes, 1052 header bytes  	[MsgId: MMSG-26386]
+TC_02_login.c(23): Notify: Transaction "TC_02_login" ended with a "Pass" status (Duration: 4.5545 Wasted Time: 0.0130).
+Ending action TC_02_login.
+Starting action TC_03_select_automobile_type.
+TC_03_select_automobile_type.c(3): Notify: Transaction "TC_03_select_automobile_type" started.
+TC_03_select_automobile_type.c(5): Notify: Saving Parameter "p_zipcode = 022820".
+TC_03_select_automobile_type.c(7): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(7): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(17): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(17): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(26): web_url("quote_auto.jsf") started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(26): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(26): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(26): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto.jsf"  	[MsgId: MMSG-26659]
+TC_03_select_automobile_type.c(26): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/next.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto.jsf"  	[MsgId: MMSG-26659]
+TC_03_select_automobile_type.c(26): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/images/css-nav.gif" (specified by argument number 9)  	[MsgId: MMSG-26576]
+TC_03_select_automobile_type.c(26): Notify: Saving Parameter "C_vehicle_type_1 = car".
+TC_03_select_automobile_type.c(26): Notify: Saving Parameter "C_vehicle_type_2 = truck".
+TC_03_select_automobile_type.c(26): Notify: Saving Parameter "C_viewstate = j_id4:j_id5".
+TC_03_select_automobile_type.c(26): Notify: Saving Parameter "C_vehicle_type_count = 2".
+TC_03_select_automobile_type.c(26): web_url("quote_auto.jsf") was successful, 70167 body bytes, 1224 header bytes  	[MsgId: MMSG-26386]
+TC_03_select_automobile_type.c(37): Notify: Parameter Substitution: parameter "C_vehicle_type_count" =  "2"
+TC_03_select_automobile_type.c(37): Notify: Parameter Substitution: parameter "C_vehicle_type_1" =  "car"
+TC_03_select_automobile_type.c(38): Notify: Saving Parameter "P_random_vehicle_type = car".
+TC_03_select_automobile_type.c(40): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(40): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(49): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(49): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(58): web_reg_find started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(58): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(63): web_reg_find started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(63): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_03_select_automobile_type.c(68): web_submit_data("quote_auto.jsf_2") started  	[MsgId: MMSG-26355]
+TC_03_select_automobile_type.c(68): Notify: Parameter Substitution: parameter "p_zipcode" =  "022820"
+TC_03_select_automobile_type.c(68): Notify: Parameter Substitution: parameter "email_id" =  "ud@gmail.com"
+TC_03_select_automobile_type.c(68): Notify: Parameter Substitution: parameter "P_random_vehicle_type" =  "car"
+TC_03_select_automobile_type.c(68): Notify: Parameter Substitution: parameter "C_viewstate" =  "j_id4:j_id5"
+TC_03_select_automobile_type.c(68): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(68): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(68): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(68): Resource "https://demo.borland.com/InsuranceWebExtJS/images/next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_gender_1 = Male".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_gender_2 = Female".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_driving_record_1 = Excellent".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_driving_record_2 = Good".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_driving_record_3 = Fair".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_driving_record_4 = Poor".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_gender_count = 2".
+TC_03_select_automobile_type.c(68): Notify: Saving Parameter "C_driving_record_count = 4".
+TC_03_select_automobile_type.c(68): Registered web_reg_find successful for "Text=Automobile Instant Quote" (count=2)  	[MsgId: MMSG-26364]
+TC_03_select_automobile_type.c(68): Registered web_reg_find successful for "Text=Instant Auto Quote - Continued" (count=1)  	[MsgId: MMSG-26364]
+TC_03_select_automobile_type.c(68): web_submit_data("quote_auto.jsf_2") was successful, 2415 body bytes, 369 header bytes  	[MsgId: MMSG-26386]
+TC_03_select_automobile_type.c(86): Notify: Parameter Substitution: parameter "C_gender_count" =  "2"
+TC_03_select_automobile_type.c(86): Notify: Parameter Substitution: parameter "C_gender_1" =  "Male"
+TC_03_select_automobile_type.c(87): Notify: Saving Parameter "P_random_gender = Male".
+TC_03_select_automobile_type.c(89): Notify: Parameter Substitution: parameter "C_driving_record_count" =  "4"
+TC_03_select_automobile_type.c(89): Notify: Parameter Substitution: parameter "C_driving_record_4" =  "Poor"
+TC_03_select_automobile_type.c(90): Notify: Saving Parameter "P_random_driving_record = Poor".
+TC_03_select_automobile_type.c(93): Notify: Transaction "TC_03_select_automobile_type" ended with a "Pass" status (Duration: 2.1565 Wasted Time: 0.0292).
+Ending action TC_03_select_automobile_type.
+Starting action TC_04_select_the_option.
+TC_04_select_the_option.c(3): Notify: Transaction "TC_04_select_the_option" started.
+TC_04_select_the_option.c(6): Notify: Saving Parameter "P_age = 28".
+TC_04_select_the_option.c(8): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_04_select_the_option.c(8): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_04_select_the_option.c(17): web_reg_find started  	[MsgId: MMSG-26355]
+TC_04_select_the_option.c(17): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_04_select_the_option.c(22): web_reg_find started  	[MsgId: MMSG-26355]
+TC_04_select_the_option.c(22): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_04_select_the_option.c(27): web_submit_data("quote_auto2.jsf") started  	[MsgId: MMSG-26355]
+TC_04_select_the_option.c(27): Notify: Parameter Substitution: parameter "P_age" =  "28"
+TC_04_select_the_option.c(27): Notify: Parameter Substitution: parameter "P_random_gender" =  "Male"
+TC_04_select_the_option.c(27): Notify: Parameter Substitution: parameter "P_random_driving_record" =  "Poor"
+TC_04_select_the_option.c(27): Found resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/css/ext-all.css" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf"  	[MsgId: MMSG-26659]
+TC_04_select_the_option.c(27): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_04_select_the_option.c(27): Found resource "https://demo.borland.com/InsuranceWebExtJS/ext/adapter/ext/ext-base-debug.js" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf"  	[MsgId: MMSG-26659]
+TC_04_select_the_option.c(27): Found resource "https://demo.borland.com/InsuranceWebExtJS/ext/ext-all-debug.js" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf"  	[MsgId: MMSG-26659]
+TC_04_select_the_option.c(27): Found resource "https://demo.borland.com/InsuranceWebExtJS/javascript/serializer.js" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf"  	[MsgId: MMSG-26659]
+TC_04_select_the_option.c(27): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_04_select_the_option.c(27): Found resource "https://demo.borland.com/InsuranceWebExtJS/javascript/cars.js" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto2.jsf"  	[MsgId: MMSG-26659]
+TC_04_select_the_option.c(27): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_04_select_the_option.c(27): Resource "https://demo.borland.com/InsuranceWebExtJS/images/next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_04_select_the_option.c(27): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/form/text-bg.gif" (specified by argument number 31)  	[MsgId: MMSG-26576]
+TC_04_select_the_option.c(27): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/form/trigger.gif" (specified by argument number 34)  	[MsgId: MMSG-26576]
+TC_04_select_the_option.c(27): Notify: Saving Parameter "C_financial_info_1 = Own".
+TC_04_select_the_option.c(27): Notify: Saving Parameter "C_financial_info_2 = Finance".
+TC_04_select_the_option.c(27): Notify: Saving Parameter "C_financial_info_3 = Lease".
+TC_04_select_the_option.c(27): Notify: Saving Parameter "C_financial_info_count = 3".
+TC_04_select_the_option.c(27): Registered web_reg_find successful for "Text=  Last Screen! Give us some information about your automobile." (count=1)  	[MsgId: MMSG-26364]
+TC_04_select_the_option.c(27): Registered web_reg_find successful for "Text=Instant Auto Quote - Continued" (count=1)  	[MsgId: MMSG-26364]
+TC_04_select_the_option.c(27): web_submit_data("quote_auto2.jsf") was successful, 1549224 body bytes, 2471 header bytes  	[MsgId: MMSG-26386]
+TC_04_select_the_option.c(47): web_url("carMakeData.jsf") started  	[MsgId: MMSG-26355]
+TC_04_select_the_option.c(47): web_url("carMakeData.jsf") was successful, 166 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+TC_04_select_the_option.c(55): Notify: Parameter Substitution: parameter "C_financial_info_count" =  "3"
+TC_04_select_the_option.c(55): Notify: Parameter Substitution: parameter "C_financial_info_1" =  "Own"
+TC_04_select_the_option.c(56): Notify: Saving Parameter "P_financial_type = Own".
+TC_04_select_the_option.c(59): Notify: Transaction "TC_04_select_the_option" ended with a "Pass" status (Duration: 10.6412 Wasted Time: 0.2342).
+Ending action TC_04_select_the_option.
+Starting action TC_05_select_car_type.
+TC_05_select_car_type.c(3): Notify: Transaction "TC_05_select_car_type" started.
+TC_05_select_car_type.c(5): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(5): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_05_select_car_type.c(12): web_submit_data("carMakeData.jsf_2") started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(12): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow.png" (specified by argument number 13)  	[MsgId: MMSG-26576]
+TC_05_select_car_type.c(12): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow-lr.png" (specified by argument number 16)  	[MsgId: MMSG-26576]
+TC_05_select_car_type.c(12): Downloading resource "https://demo.borland.com/InsuranceWebExtJS/ext/resources/images/default/shadow-c.png" (specified by argument number 19)  	[MsgId: MMSG-26576]
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_1 = Buick".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_2 = Chrysler".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_3 = Cadillac".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_4 = Toyota".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_5 = Pontiac".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_6 = Lexus".
+TC_05_select_car_type.c(12): Notify: Saving Parameter "C_car_name_count = 6".
+TC_05_select_car_type.c(12): web_submit_data("carMakeData.jsf_2") was successful, 730 body bytes, 1182 header bytes  	[MsgId: MMSG-26386]
+TC_05_select_car_type.c(27): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(27): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+TC_05_select_car_type.c(34): web_url("carModelData.jsf") started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_1 = BLS".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_2 = Deville".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_3 = Eldorado".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_4 = Escalade".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_5 = Seville".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_6 = SRX".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_7 = CTS".
+TC_05_select_car_type.c(34): Notify: Saving Parameter "C_car_model_count = 7".
+TC_05_select_car_type.c(34): web_url("carModelData.jsf") was successful, 187 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+TC_05_select_car_type.c(43): Notify: Parameter Substitution: parameter "C_car_name_count" =  "6"
+TC_05_select_car_type.c(44): Notify: Parameter Substitution: parameter "C_car_model_count" =  "7"
+TC_05_select_car_type.c(45): Notify: Parameter Substitution: parameter "C_car_model_count" =  "7"
+TC_05_select_car_type.c(45): Notify: Parameter Substitution: parameter "C_car_model_5" =  "Seville"
+TC_05_select_car_type.c(46): Notify: Saving Parameter "P_selectedCarModel = Seville".
+TC_05_select_car_type.c(48): Notify: Parameter Substitution: parameter "P_random_gender" =  "Male"
+TC_05_select_car_type.c(69): Notify: Saving Parameter "P_selected_car = Toyota".
+TC_05_select_car_type.c(71): web_submit_data("carModelData.jsf_2") started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(71): Notify: Parameter Substitution: parameter "P_selected_car" =  "Toyota"
+TC_05_select_car_type.c(71): web_submit_data("carModelData.jsf_2") was successful, 136 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+TC_05_select_car_type.c(82): web_reg_find started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(82): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_05_select_car_type.c(87): web_reg_find started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(87): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_05_select_car_type.c(92): web_submit_data("quote_auto3.jsf") started  	[MsgId: MMSG-26355]
+TC_05_select_car_type.c(92): Notify: Parameter Substitution: parameter "P_selected_car" =  "Toyota"
+TC_05_select_car_type.c(92): Notify: Parameter Substitution: parameter "P_selected_car" =  "Toyota"
+TC_05_select_car_type.c(92): Notify: Parameter Substitution: parameter "P_selectedCarModel" =  "Seville"
+TC_05_select_car_type.c(92): Notify: Parameter Substitution: parameter "P_selectedCarModel" =  "Seville"
+TC_05_select_car_type.c(92): Notify: Parameter Substitution: parameter "P_financial_type" =  "Own"
+TC_05_select_car_type.c(92): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_05_select_car_type.c(92): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_05_select_car_type.c(92): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_05_select_car_type.c(92): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/new_quote.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto3.jsf"  	[MsgId: MMSG-26659]
+TC_05_select_car_type.c(92): Found resource "https://demo.borland.com/InsuranceWebExtJS/images/purchase_quote.gif" in HTML "https://demo.borland.com/InsuranceWebExtJS/quote_auto3.jsf"  	[MsgId: MMSG-26659]
+TC_05_select_car_type.c(92): Registered web_reg_find successful for "Text=Based on the following information that you provided" (count=1)  	[MsgId: MMSG-26364]
+TC_05_select_car_type.c(92): Registered web_reg_find successful for "Text=Personal Information" (count=1)  	[MsgId: MMSG-26364]
+TC_05_select_car_type.c(92): web_submit_data("quote_auto3.jsf") was successful, 5585 body bytes, 939 header bytes  	[MsgId: MMSG-26386]
+TC_05_select_car_type.c(113): Notify: Transaction "TC_05_select_car_type" ended with a "Pass" status (Duration: 3.8073 Wasted Time: 0.0406).
+Ending action TC_05_select_car_type.
+Starting action TC_06_click_the_purchase_button.
+TC_06_click_the_purchase_button.c(4): Notify: Transaction "TC_06_click_the_purchase_button" started.
+TC_06_click_the_purchase_button.c(6): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+TC_06_click_the_purchase_button.c(6): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+TC_06_click_the_purchase_button.c(16): web_reg_find started  	[MsgId: MMSG-26355]
+TC_06_click_the_purchase_button.c(16): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_06_click_the_purchase_button.c(21): web_submit_data("quote_result.jsf") started  	[MsgId: MMSG-26355]
+TC_06_click_the_purchase_button.c(21): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_06_click_the_purchase_button.c(21): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_06_click_the_purchase_button.c(21): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_06_click_the_purchase_button.c(21): Resource "https://demo.borland.com/InsuranceWebExtJS/images/purchase_quote.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_06_click_the_purchase_button.c(21): Notify: Saving Parameter "C_user_name = Arun Roshan".
+TC_06_click_the_purchase_button.c(21): Registered web_reg_find successful for "Text=Credit Card Information " (count=1)  	[MsgId: MMSG-26364]
+TC_06_click_the_purchase_button.c(21): web_submit_data("quote_result.jsf") was successful, 2359 body bytes, 369 header bytes  	[MsgId: MMSG-26386]
+TC_06_click_the_purchase_button.c(36): Notify: Transaction "TC_06_click_the_purchase_button" ended with a "Pass" status (Duration: 1.0594 Wasted Time: 0.0104).
+Ending action TC_06_click_the_purchase_button.
+Starting action TC_07_enter_credit_card_information.
+TC_07_enter_credit_card_information.c(3): Notify: Transaction "TC_07_enter_credit_card_information" started.
+TC_07_enter_credit_card_information.c(5): Notify: Saving Parameter "P_fakeCreditCard = 45326 9876 5432 109435".
+TC_07_enter_credit_card_information.c(6): Notify: Saving Parameter "P_fakeExpiryDate = 06/23".
+TC_07_enter_credit_card_information.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+TC_07_enter_credit_card_information.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_07_enter_credit_card_information.c(13): web_reg_find started  	[MsgId: MMSG-26355]
+TC_07_enter_credit_card_information.c(13): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_07_enter_credit_card_information.c(18): web_submit_data("purchase_quote.jsf_3") started  	[MsgId: MMSG-26355]
+TC_07_enter_credit_card_information.c(18): Notify: Parameter Substitution: parameter "C_user_name" =  "Arun Roshan"
+TC_07_enter_credit_card_information.c(18): Notify: Parameter Substitution: parameter "P_fakeCreditCard" =  "45326 9876 5432 109435"
+TC_07_enter_credit_card_information.c(18): Notify: Parameter Substitution: parameter "P_fakeExpiryDate" =  "06/23"
+TC_07_enter_credit_card_information.c(18): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_07_enter_credit_card_information.c(18): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_07_enter_credit_card_information.c(18): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tilesV.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_07_enter_credit_card_information.c(18): Registered web_reg_find successful for "Text=Congratulations" (count=1)  	[MsgId: MMSG-26364]
+TC_07_enter_credit_card_information.c(18): Registered web_reg_find successful for "Text=You have purchased a new auto policy.  Welcome to the InsuranceCo family" (count=1)  	[MsgId: MMSG-26364]
+TC_07_enter_credit_card_information.c(18): web_submit_data("purchase_quote.jsf_3") was successful, 2065 body bytes, 369 header bytes  	[MsgId: MMSG-26386]
+TC_07_enter_credit_card_information.c(36): Notify: Transaction "TC_07_enter_credit_card_information" ended with a "Pass" status (Duration: 1.3731 Wasted Time: 0.0070).
+Ending action TC_07_enter_credit_card_information.
+Starting action TC_08_logout.
+TC_08_logout.c(3): Notify: Transaction "TC_08_logout" started.
+TC_08_logout.c(6): web_url("index.jsf_4") started  	[MsgId: MMSG-26355]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tiles.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/spacer.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/details.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/logout.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/profile.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/main_services.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/highlights.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): Resource "https://demo.borland.com/InsuranceWebExtJS/images/submit2.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(6): web_url("index.jsf_4") was successful, 2571 body bytes, 369 header bytes  	[MsgId: MMSG-26386]
+TC_08_logout.c(15): web_reg_find started  	[MsgId: MMSG-26355]
+TC_08_logout.c(15): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TC_08_logout.c(20): web_submit_form("index.jsf_5") started  	[MsgId: MMSG-26355]
+TC_08_logout.c(20): Submitting form to "https://demo.borland.com/InsuranceWebExtJS/index.jsf", Target Frame=""  	[MsgId: MMSG-27978]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/javascript/menu.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/tiles.png" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/spacer.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/details.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/logout.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/profile.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/main_services.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/highlights.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Resource "https://demo.borland.com/InsuranceWebExtJS/images/submit2.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+TC_08_logout.c(20): Error -26366: "Text=login-messages" not found for web_reg_find  	[MsgId: MERR-26366]
+TC_08_logout.c(20): web_submit_form("index.jsf_5") highest severity level was "ERROR", 2570 body bytes, 369 header bytes  	[MsgId: MMSG-26388]
+TC_08_logout.c(20): Notify: Transaction "TC_08_logout" ended with a "Fail" status (Duration: 1.8508 Wasted Time: 0.0121).
+TC_08_logout.c(20): Notify: Transaction "TC_08_logout" has 1 error message(s).
+TC_08_logout.c(20): Notify: The 1st error message associated with transaction "TC_08_logout" is "Error -26366: "Text=login-messages" not found for web_reg_find"
+Ending action TC_08_logout.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

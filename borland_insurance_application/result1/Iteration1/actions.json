@@ -1,0 +1,198 @@
+[
+    {
+        "actionName": "TC_01_lanuch",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: InsuranceWebExtJS",
+                "infFile": "t1.inf",
+                "time": 1693235128520
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_01_lanuch",
+                "rawStartTime": 1693235126051,
+                "rawEndTime": 1693235128541,
+                "thinkTime": 0.0,
+                "wastedTime": 0.2650320529937744
+            }
+        ]
+    },
+    {
+        "actionName": "TC_02_login",
+        "steps": [
+            {
+                "stepId": "STEP2",
+                "stepName": "Submit Data: index.jsf;jsessionid={C_jsessionid}",
+                "infFile": "t2.inf",
+                "time": 1693235133354
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_02_login",
+                "rawStartTime": 1693235128823,
+                "rawEndTime": 1693235133377,
+                "thinkTime": 0.0,
+                "wastedTime": 0.012954473495483399
+            }
+        ]
+    },
+    {
+        "actionName": "TC_03_select_automobile_type",
+        "steps": [
+            {
+                "stepId": "STEP3",
+                "stepName": "Url: quote_auto.jsf",
+                "infFile": "t5.inf",
+                "time": 1693235134898
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Submit Data: quote_auto.jsf_2",
+                "infFile": "t8.inf",
+                "time": 1693235135721
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_03_select_automobile_type",
+                "rawStartTime": 1693235133645,
+                "rawEndTime": 1693235135802,
+                "thinkTime": 0.0,
+                "wastedTime": 0.02916407585144043
+            }
+        ]
+    },
+    {
+        "actionName": "TC_04_select_the_option",
+        "steps": [
+            {
+                "stepId": "STEP5",
+                "stepName": "Submit Data: quote_auto2.jsf",
+                "infFile": "t10.inf",
+                "time": 1693235146194
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: carMakeData.jsf",
+                "infFile": "t11.inf",
+                "time": 1693235146612
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_04_select_the_option",
+                "rawStartTime": 1693235136022,
+                "rawEndTime": 1693235146664,
+                "thinkTime": 0.0,
+                "wastedTime": 0.23423194885253907
+            }
+        ]
+    },
+    {
+        "actionName": "TC_05_select_car_type",
+        "steps": [
+            {
+                "stepId": "STEP7",
+                "stepName": "Submit Data: carMakeData.jsf_2",
+                "infFile": "t13.inf",
+                "time": 1693235148044
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: carModelData.jsf",
+                "infFile": "t15.inf",
+                "time": 1693235148676
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Submit Data: carModelData.jsf_2",
+                "infFile": "t16.inf",
+                "time": 1693235149559
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Submit Data: quote_auto3.jsf",
+                "infFile": "t17.inf",
+                "time": 1693235150677
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_05_select_car_type",
+                "rawStartTime": 1693235146897,
+                "rawEndTime": 1693235150704,
+                "thinkTime": 0.0,
+                "wastedTime": 0.04058551788330078
+            }
+        ]
+    },
+    {
+        "actionName": "TC_06_click_the_purchase_button",
+        "steps": [
+            {
+                "stepId": "STEP11",
+                "stepName": "Submit Data: quote_result.jsf",
+                "infFile": "t19.inf",
+                "time": 1693235152003
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_06_click_the_purchase_button",
+                "rawStartTime": 1693235150968,
+                "rawEndTime": 1693235152027,
+                "thinkTime": 0.0,
+                "wastedTime": 0.01040339469909668
+            }
+        ]
+    },
+    {
+        "actionName": "TC_07_enter_credit_card_information",
+        "steps": [
+            {
+                "stepId": "STEP12",
+                "stepName": "Submit Data: purchase_quote.jsf_3",
+                "infFile": "t20.inf",
+                "time": 1693235153644
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_07_enter_credit_card_information",
+                "rawStartTime": 1693235152293,
+                "rawEndTime": 1693235153666,
+                "thinkTime": 0.0,
+                "wastedTime": 0.007040500640869141
+            }
+        ]
+    },
+    {
+        "actionName": "TC_08_logout",
+        "steps": [
+            {
+                "stepId": "STEP13",
+                "stepName": "Url: index.jsf_4",
+                "infFile": "t21.inf",
+                "time": 1693235154971
+            },
+            {
+                "stepId": "STEP14",
+                "stepName": "Submit Form: index.jsf_5",
+                "infFile": "t22.inf",
+                "time": 1693235155809
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "TC_08_logout",
+                "rawStartTime": 1693235153961,
+                "rawEndTime": 1693235155812,
+                "thinkTime": 0.0,
+                "wastedTime": 0.012050390243530274
+            }
+        ]
+    }
+]
